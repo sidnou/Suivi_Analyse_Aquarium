@@ -63,9 +63,17 @@ class Analyse(RemplacementEau):
                 f"{self.quantity_osmose} "
                 f"{self.quantity_remplacement_eau} "
                 f"{self.produits} ")
+
+
 # Les remarque du LLM
 class Remarque(models.Model):
     pass
+
+
 # Les taches que le LLM demande de faire
 class Tache(models.Model):
+    pass
+
+
+class Probleme(models.Model):
     pass

@@ -1,0 +1,47 @@
+Analyse d'eau :
+No2:
+No3:
+NH4:
+pH:
+TDS:
+KH:
+GH:
+Temps de lumière: en heure
+Remplacement eau :
+Quantité: en Litre
+ - Osomosé: En %
+ - Robinet: En %
+Produit Utilisé:
+    Nom du produit
+    Quantité: En ml
+
+## Message pour L'AI ##
+J'ai un aquarium de (En litre).J'ai fait des analyse.
+Espèce dans l'aquarium :
+    poisson:
+        -
+    invertébré
+        -
+Plante:
+    -
+
+Les résultats des analyse sont:
+- No2:{Valeur} mg/L
+- No3:{Valeur}
+- NH4:{Valeur}
+- pH:{Valeur}
+- TDS:{Valeur}
+- KH:{Valeur}
+- GH:{Valeur}
+Remplacement d'eau aprés analyse:
+    Quantité: {Valeur}
+        - Osmosé : {Valeur}%
+        - Robinet: {Valeur}%
+Produit utilisé aprés analyse:
+    Nom : {Valeur}
+    Quantité: {Valeur} ml
+
+Problème rencontré:
+
+
+Avec les résultats y a t'il des taches affaire?
