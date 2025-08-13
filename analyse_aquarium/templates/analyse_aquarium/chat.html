@@ -1,0 +1,38 @@
+    <!-- mon_app_llm/templates/mon_app_llm/chat.html -->
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chatbot LLM Local</title>
+        <!-- Utilisation de Tailwind CSS pour un style moderne et rapide -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+            /* Pour un style plus agréable */
+            .response-box {
+                white-space: pre-wrap; /* Préserve les retours à la ligne */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+        <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-2xl m-4">
+            <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">Chatbot LLM Local</h1>
+
+            <form method="post" class="space-y-4">
+                {% csrf_token %}
+                <textarea name="prompt" rows="4" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Entrez votre prompt ici...">{{ prompt }}</textarea>
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-200">Envoyer</button>
+            </form>
+
+            {% if response %}
+                <div class="mt-8 p-6 bg-blue-50 rounded-lg border border-blue-200">
+                    <h2 class="text-xl font-bold mb-2 text-blue-800">Réponse du LLM :</h2>
+                    <p class="text-gray-700 response-box">{{ response }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </body>
+    </html>

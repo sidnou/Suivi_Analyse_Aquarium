@@ -55,7 +55,7 @@ ROOT_URLCONF = 'suivi_analyse_aquarium.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'analyse_aquarium/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
