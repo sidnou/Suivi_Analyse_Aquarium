@@ -1,17 +1,20 @@
 from django.shortcuts import render
 import ollama
 import environ
-
+import os
 # Create your views here.
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 env = environ.Env()
 
+
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 def chat_ollama_remote(request):
     response_text = ""
     prompt = ""
 
-    # ollama_api_url = env("LLM_LOCAL")
-    client = ollama.Client(host="") # exemple: "http://127.0.0.14:11434"
+    ollama_api_url = env("LLM_LOCAL")
+    client = ollama.Client(host=ollama_api_url) # exemple: "http://127.0.0.14:11434"
     print(client.list())
     if request.method == 'POST':
         prompt = request.POST.get('prompt', '')
