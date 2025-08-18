@@ -35,3 +35,12 @@ def chat_ollama_remote(request):
     return render(request, 'analyse_aquarium/chat.html', {'response': response_text,
         'prompt': prompt
                                                           })
+
+
+def home(request):
+    context = {
+        'titre': 'Accueil',
+
+    }
+
+    return render(request,'analyse_aquarium/index.html',context)
