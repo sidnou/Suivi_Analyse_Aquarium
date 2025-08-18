@@ -1,19 +1,14 @@
 from django.shortcuts import render
 import ollama
-import environ
-import os
+from django.conf import settings
 # Create your views here.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-env = environ.Env()
-
-
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+host_ai = settings.LLM_LOCAL
 
 def chat_ollama_remote(request):
     response_text = ""
     prompt = ""
 
-    ollama_api_url = env("LLM_LOCAL")
+    ollama_api_url = host_ai
     client = ollama.Client(host=ollama_api_url) # exemple: "http://127.0.0.14:11434"
     print(client.list())
     if request.method == 'POST':
@@ -23,7 +18,7 @@ def chat_ollama_remote(request):
                 # Appel au modèle 'mistral' sur le serveur distant
                 # Assurez-vous que le modèle 'mistral' a été téléchargé sur le serveur distant
                 stream = client.chat(
-                    model='mistral-nemo',
+                    model='mistral:7b',
                     messages=[{'role': 'user', 'content': prompt}],
                     stream=True
                 )
