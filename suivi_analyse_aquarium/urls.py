@@ -22,6 +22,6 @@ from analyse_aquarium import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
-    path('', views.chat_ollama_remote),
+    path('chat/', views.chat_ollama_remote),
     path('home/', views.home, name='home'),
 ]
