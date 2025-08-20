@@ -21,5 +21,5 @@ from analyse_aquarium import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.chat_ollama_remote),
+    path('chat/',views.chat_ollama_remote),
 ]
