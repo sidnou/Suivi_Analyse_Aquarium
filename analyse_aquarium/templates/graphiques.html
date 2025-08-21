@@ -1,0 +1,41 @@
+<div class="graphique text-center ">
+
+    <h2 class="my-4">Graphique</h2>
+    <div class="flex justify-center">
+
+        <div class="bg-gray-300 w-2/3 h-96">
+
+            <div style="width: 80%; margin: auto;">
+                <canvas id="myChart"></canvas>
+                <script>
+                    const ctx = document.getElementById('myChart');
+
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Janvier', 'Février', 'Mars', 'Avril'],
+                            datasets: [{
+                                label: 'Ventes',
+                                data: [12, 19, 3, 5],
+                                backgroundColor: [
+                                    '#60A5FA', // bg-blue-400 en Tailwind
+                                    '#3B82F6', // bg-blue-500
+                                    '#2563EB', // bg-blue-600
+                                    '#1D4ED8'  // bg-blue-700
+                                ],
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
