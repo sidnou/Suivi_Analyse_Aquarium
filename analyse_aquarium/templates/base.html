@@ -1,9 +1,11 @@
-{% load django_browser_reload %}
+{% load django_browser_reload tailwind_tags %}
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>{{ Title }}</title>
+    {% tailwind_css %}
 </head>
 <body>
 {% block content %}

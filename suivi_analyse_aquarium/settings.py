@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "django_browser_reload",
-    'analyse_aquarium'
+    'analyse_aquarium',
+    'tailwind',
+    'theme'
 ]
 
 MIDDLEWARE = [
@@ -124,3 +126,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # AI LOCAL
 LLM_LOCAL = env("LLM_LOCAL")
+
+
+# TAILWIND CSS
+TAILWIND_APP_NAME = 'theme'
+# linux
+# NPM_BIN_PATH = "/usr/local/bin/npm"
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
