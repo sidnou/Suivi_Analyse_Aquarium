@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "django_browser_reload",
     'analyse_aquarium',
     'tailwind',
-    'theme'
+    'theme',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +130,9 @@ LLM_LOCAL = env("LLM_LOCAL")
 
 # TAILWIND CSS
 TAILWIND_APP_NAME = 'theme'
+
+#  TODO: Créer une fonction pour execution npm en fonction de la plateforme
 # linux
-# NPM_BIN_PATH = "/usr/local/bin/npm"
-NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+NPM_BIN_PATH = "/usr/bin/npm"
+# Windows
+# NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
