@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 
-Contenu de la page
+{#Contenu de la page#}
 {% block content %}
-<h1>{{ Title }}</h1>
-    <p>Analyse  d'eau aquarium </p>
-    {% include 'table.html' %}
+    {% include "cards.html" %}
+    {% include "table.html" %}
 {% endblock %}
