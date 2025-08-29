@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import platform
+
 import environ
 import os
 
@@ -131,8 +133,15 @@ LLM_LOCAL = env("LLM_LOCAL")
 # TAILWIND CSS
 TAILWIND_APP_NAME = 'theme'
 
-#  TODO: Créer une fonction pour execution npm en fonction de la plateforme
+
 # linux
-NPM_BIN_PATH = "/usr/bin/npm"
+# NPM_BIN_PATH = "/usr/bin/npm"
 # Windows
 # NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+if platform.system() == "Windows":
+    NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+elif platform.system() == "Linux":
+    NPM_BIN_PATH = "/usr/bin/npm"
+else:
+    raise ValueError(" platforme inconnue ")
