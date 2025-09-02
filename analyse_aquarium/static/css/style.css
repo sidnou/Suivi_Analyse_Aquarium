@@ -45,3 +45,13 @@
     );
     color: white;
 }
+
+.bg-dg-yellow-180 {
+    background: -webkit-linear-gradient(
+            180deg, #FDF221, #F8FF1F
+    );
+    background: linear-gradient(
+            180deg, #FDF221, #F8FF1F
+    );
+    color: #292524;
+}
