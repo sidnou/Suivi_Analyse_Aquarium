@@ -1,0 +1,47 @@
+/* Couleur dégradé du fond */
+.bg-dg-green-180 {
+    background: -webkit-linear-gradient(
+            180deg, #77e069, #29d4af); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+            180deg, #77e069, #29d4af); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+
+.bg-dg-green-90 {
+    background: -webkit-linear-gradient(
+            90deg, #77e069, #29d4af); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+            90deg, #77e069, #29d4af); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+
+.bg-dg-red-180 {
+    background: -webkit-linear-gradient(
+            180deg, #df1111, #dd8080
+    );
+    background: linear-gradient(
+            180deg, #df1111, #dd8080
+    );
+    color: white;
+}
+
+.bg-dg-orange-180 {
+    background: -webkit-linear-gradient(
+            180deg, #f67d18, #e16730
+    );
+    background: linear-gradient(
+            180deg, #f67d18, #e16730
+    );
+    color: white;
+}
+
+
+.bg-dg-blue-180 {
+    background: -webkit-linear-gradient(
+            180deg, #0080ff, #00ffff
+    );
+    background: linear-gradient(
+            180deg, #0080ff, #00ffff
+    );
+    color: white;
+}
