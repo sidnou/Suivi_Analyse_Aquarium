@@ -1,17 +1,24 @@
 {# menu #}
 {# top bar #}
+div.md:invisible
 <div class="flex justify-center">
-<ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-</ul>
+    <div class="grid grid-cols-3 gap-4">
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
 </div>
 {# sidebar #}
-<div class="flex flex-col">
-    <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-</ul>
+<div class="lg:invisible" id="sidebar"> {#  afficher < 1024px #}
+
+    <div class="flex flex-col">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
 </div>
