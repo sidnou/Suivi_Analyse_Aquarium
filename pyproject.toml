@@ -1,0 +1,14 @@
+[project]
+name = "suivi-analyse-aquarium"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "django",
+    "django-tailwind",
+    "django-browser-reload",
+    "pytest",
+    "django-environ==0.12.0",
+    "ollama==0.5.3",
+    "pydantic-core>=2.33.2",
+]
