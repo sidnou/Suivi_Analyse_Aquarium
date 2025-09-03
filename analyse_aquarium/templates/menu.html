@@ -1,24 +1,25 @@
 {# menu #}
 {# top bar #}
-div.md:invisible
-<div class="flex justify-center">
-    <div class="grid grid-cols-3 gap-4">
+<div class="max-lg:invisible"> {# Affiche quand > 1024 #}
+    <div class="flex justify-center ">{# TODO: Mettre le menu sur un seule ligne #}
+        <div class="flex-1">
 
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+            <ul class="contents">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </div>
 </div>
 {# sidebar #}
-<div class="lg:invisible" id="sidebar"> {#  afficher < 1024px #}
+<div class="lg:invisible" id="sidebar"> {#  afficher quand < 1024px #}
 
-    <div class="flex flex-col">
+    <div class="flex justify-start">{# TODO: Mettre le menu en affichage burger#}
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Home1</a></li>
+            <li><a href="#">About2</a></li>
+            <li><a href="#">Contact3</a></li>
         </ul>
     </div>
 </div>
