@@ -29,101 +29,31 @@
             </tr>
 
             {#    corp du tableau#}
+            {% for analyse in tab_analyses%}
+
+
             <tr class="bg-white hover:bg-base-300">
 
-                <td><0.01</td>
-                <td><0.05</td>
-                <td>3</td>
-                <td>4</td>
-                <td>8</td>
-                <td>250</td>
-                <td>7.4</td>
-                <td>0.02</td>
-                <td>10</td>
-                <td>0.05</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{ analyse.ammonium }}</td>
+                <td>{{ analyse.nitrite}}</td>
+                <td>{{ analyse.nitrate}}</td>
+                <td>{{ analyse.alcalimetrique }}</td>
+                <td>{{ analyse.hydrotimetrique }}</td>
+                <td>{{ analyse.tds }}</td>
+                <td>{{ analyse.potentiel_hydogene}}</td>
+                <td>{{ analyse.fer }}</td>
+                <td>{{ analyse.co2}}</td>
+                <td>{{ analyse.air}}</td>
+                <td>{{ analyse.produits }}</td>
+                <td>{{ analyse.temp_eclairage}}</td>
+                <td>{{ analyse.quantity_remplacement_eau }}</td>
+                <td>{{ analyse.remarque}}</td>
+                <td>{{ analyse.problème}}</td>
+
 
             </tr>
-            <tr class="bg-white hover:bg-base-300">
+            {% endfor %}
 
-                <td><0.01</td>
-                <td><0.05</td>
-                <td>3</td>
-                <td>4</td>
-                <td>8</td>
-                <td>250</td>
-                <td>7.4</td>
-                <td>0.02</td>
-                <td>10</td>
-                <td>0.05</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
-            </tr>
-            <tr class="bg-white hover:bg-base-300">
-
-                <td><0.01</td>
-                <td><0.05</td>
-                <td>3</td>
-                <td>4</td>
-                <td>8</td>
-                <td>250</td>
-                <td>7.4</td>
-                <td>0.02</td>
-                <td>10</td>
-                <td>0.05</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
-            </tr>
-            <tr class="bg-white hover:bg-base-300">
-
-                <td><0.01</td>
-                <td><0.05</td>
-                <td>3</td>
-                <td>4</td>
-                <td>8</td>
-                <td>250</td>
-                <td>7.4</td>
-                <td>0.02</td>
-                <td>10</td>
-                <td>0.05</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
-            </tr>
-            <tr class="bg-white hover:bg-base-300">
-
-                <td><0.01</td>
-                <td><0.05</td>
-                <td>3</td>
-                <td>4</td>
-                <td>8</td>
-                <td>250</td>
-                <td>7.4</td>
-                <td>0.02</td>
-                <td>10</td>
-                <td>0.05</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
-            </tr>
         </table>
     </div>
 </div>
