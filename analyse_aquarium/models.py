@@ -16,21 +16,21 @@ class Produits(models.Model):
 
 
 class Robinet(models.Model):
-    quantity_robinet = models.FloatField(help_text="En %")
+    quantity_robinet = models.FloatField(help_text="En %", null=True,blank=True)
 
     class Meta:
         abstract = True
 
 
 class Osmose(models.Model):
-    quantity_osmose = models.FloatField(help_text="En %")
+    quantity_osmose = models.FloatField(help_text="En %",null=True, blank=True)
 
     class Meta:
         abstract = True
 
 
 class RemplacementEau(Robinet, Osmose):
-    quantity_remplacement_eau = models.FloatField(help_text="En Litre", null=False, blank=False)
+    quantity_remplacement_eau = models.FloatField(help_text="En Litre", null=True, blank=True)
 
 
 class Analyse(RemplacementEau):
